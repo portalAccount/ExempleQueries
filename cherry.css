@@ -1,0 +1,116 @@
+header {
+  background-color: white;
+  height: 25vh;
+}
+
+.playground {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.un {
+  background-color: black;
+  width: 25vw;
+  height: 20vh;
+}
+
+.deux {
+  background-color: black;
+  width: 25vw;
+  height: 20vh;
+}
+
+.trois {
+  background-color: black;
+  width: 25vw;
+  height: 20vh;
+}
+
+
+@media screen and (max-width: 960px) {
+  .deux {
+    background-color: yellow;
+  }
+  .trois {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  header {
+    display: none;
+  }
+  .playground {
+    flex-direction: column;
+  }
+  .playground div {
+    margin: 10vh 0vw;
+  }
+  .deux {
+    background-color: yellow;
+  }
+  .trois {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .deux {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) and (max-height: 200px) {
+  .un {
+    width: 15vw;
+    background-color: green;
+    animation-name: my-slide-un;
+    animation-duration: 4s;
+    animation-direction: alternate;
+  }
+  .trois {
+    width: 15vw;
+    background-color: blue;
+    animation-name: my-slide-trois;
+    animation-duration: 4s;
+    animation-direction: alternate;
+  }
+  @keyframes my-slide-un {
+    from {
+      position: relative;
+      left: 0vw;
+      top: 0vh;
+    }
+    50% {
+      top: 30vh;
+      background-color: aliceblue;
+    }
+    to {
+      position: relative;
+      left: 85vw;
+      top: 0vh;
+    }
+  }
+  @keyframes my-slide-trois {
+    from {
+      position: relative;
+      left: 0vw;
+      bottom: 0vh;
+    }
+    42% {
+      bottom: 30vh;
+    }
+    to {
+      position: relative;
+      left: 85vw;
+      bottom: 0vh;
+    }
+  }
+}
+
+/* You can find some interest to :
+https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+
+That speaking about the queries frequently used for handle all kind of existing devices
+*/
